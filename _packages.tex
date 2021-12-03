@@ -1,0 +1,98 @@
+%!TEX root = network-dao-charter.tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+
+% Additional Title Field
+\usepackage{titling}
+\makeatletter
+\def\@subtitle{\@latex@warning@no@line{No Version Information Specified}}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+
+% Page Geometry
+\usepackage[	
+	top=2.5cm,
+	bottom=2.5cm,
+	right=2.5cm,
+	left=2.5cm
+]{geometry}
+\usepackage{booktabs}
+
+% Coloring, Graphics, and Hyperlinks
+\usepackage{xcolor,graphicx}
+\definecolor{Aragon-Blue}{rgb}{0.2353,0.5412,1}
+\usepackage[
+	breaklinks=true,
+	linktocpage=true,
+	colorlinks=true, 
+	menucolor={Aragon-Blue},
+	linkcolor={black},
+	citecolor={Aragon-Blue},
+	urlcolor={Aragon-Blue}
+]{hyperref}
+
+% Git Version Information
+\usepackage[local]{gitinfo2}
+
+% Acronyms and Glossaries
+\usepackage[
+	acronyms,
+	shortcuts,
+	nopostdot,
+	nogroupskip,
+	nonumberlist,
+	toc
+]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short}
+
+\newglossary[klg]{key}{kld}{kdn}{Key Definitions}
+\newglossary[llg]{add}{lld}{ldn}{Additional Definitions}
+\makenoidxglossaries
+
+% Custom Fonts
+\usepackage{mathspec}
+\setmainfont[
+	Path			= ./fonts/Overpass/,
+	Extension		= .ttf,
+	UprightFont		= *-Regular,
+	BoldFont		= *-Bold,
+	ItalicFont		= *-Italic,
+	BoldItalicFont	= *-BoldItalic
+]{Overpass}
+\setsansfont[
+	Path			= ./fonts/Overpass/,
+	Extension		= .ttf,
+	UprightFont		= *-Regular,
+	BoldFont		= *-Bold,
+	ItalicFont		= *-Italic,
+	BoldItalicFont	= *-BoldItalic
+]{Overpass}
+\setmathfont[
+	Path			= ./fonts/RobotoMono/,
+	Extension		= .ttf,
+	UprightFont		= *-Regular,
+	BoldFont		= *-Bold,
+	ItalicFont		= *-Italic,
+	BoldItalicFont	= *-BoldItalic
+]{RobotoMono}
+\setmonofont[
+	Path			= ./fonts/RobotoMono/,
+	Extension		= .ttf,
+	UprightFont		= *-Regular,
+	BoldFont		= *-Bold,
+	ItalicFont		= *-Italic,
+	BoldItalicFont	= *-BoldItalic
+]{RobotoMono}
+
+% Deeper Enumerations
+\usepackage{enumitem}
+\setlist{
+	nosep,
+	topsep=4pt,
+	parsep=0.5\parskip
+}
+\setlistdepth{5}
+\renewlist{enumerate}{enumerate}{5}
+\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,2]{label=\alph*.}
+\setlist[enumerate,3]{label=\roman*.}
+\setlist[enumerate,4]{label=\arabic*.}
+\setlist[enumerate,5]{label=\alph*.}

@@ -1,0 +1,43 @@
+---
+name: Correction
+description: Correct an error you've spotted
+title: "[Correction]: "
+labels: ["error"]
+assignees:
+  - Michael-A-Heuer
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this error report!
+  - type: dropdown
+    id: where
+    attributes:
+      label: In which part?
+      description: In which part of the document did you find errors?
+      options:
+        - Introduction to the Charter
+        - Aragon Network DAO Agreement
+        - Aragon Manifesto
+        - Community-Guidelines
+        - Aragon Governance Proposal Process
+        - Sub-DAO Agreements
+        - Main DAO and Sub-DAO Parameters
+        - Multiple parts
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong?
+      description: 
+        What is the error and how should it be corrected? 
+        Please, specify the line number or paragraph.
+      placeholder: 
+        "
+        - Part 5, line 75: 'walet' should be spelled 'wallet' \n
+        - Part 6, paragraph 3.a.i.1: The sentence misses a '.' at the end of the sentence.
+        "
+    validations:
+      required: true
+---

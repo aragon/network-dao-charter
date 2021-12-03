@@ -1,0 +1,241 @@
+%!TEX root = network-dao-charter.tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+
+% Acronyms and definitions have to be defined here so that the can be used in the text later.
+
+%%%%%%%%%%
+% Acronyms
+%%%%%%%%%%
+\newacronym{AGP}{AGP}{Aragon Governance Proposal}
+\newacronym{AN}{AN}{\glslink{AragonNetwork}{Aragon Network}}\glsunset{AN}
+\newacronym{ANT}{ANT}{\glslink{AragonNetwork}{Aragon Network} \glslink{AragonNetworkToken}{Token}}\glsunset{ANT}
+\newacronym{DAO}{DAO}{\glslink{DecentralizedAutonomousOrganization}{Decentralized Autonomous Organization}}\glsunset{DAO}
+\newacronym{ENS}{ENS}{\glslink{EthereumNameService}{Ethereum Name Service}}\glsunset{ENS}
+\newacronym{IPFS}{IPFS}{\glslink{IPFSNetwork}{InterPlanetary File System}}
+
+%%%%%%%%%%%%%%%%%
+% Key definitions
+%%%%%%%%%%%%%%%%%
+\newglossaryentry{ActiveDAOs}{
+	type=key,
+	name={Active Aragon \acp{DAO}},
+	description={
+		\acp{DAO} created using the smart contract provided by the Aragon Network, that have enacted at least 1 decision in the past month.
+	}
+}
+
+\newglossaryentry{AragonNetwork}{
+	type=key,
+	name={\acl{AN}},
+	description={
+		a network of \glspl{ANTHolder} and the organisations and technology created by them to pursue the goals and live the values defined in the \href{https://github.com/aragon/AGPs/blob/master/AGPs/AGP-0.md}{Aragon Manifesto}. 
+		Including but not limited to: The Aragon Network \ac{DAO}, \glspl{ANTHolder}, their affiliates, employees, contributors, licensors and service providers, and their respective officers, directors, employees, contractors, agents, licensors, suppliers, parent companies, successors, subsidiaries, affiliates, agents, representatives.
+	}
+}
+
+\newglossaryentry{AragonNetworkCharter}{
+	type=key,
+	name=\acl{AN} Charter,
+	description={the whole of this document (``this Charter''), which consists of the human-interpreted rules of the \gls{AragonNetwork} and is subdivided in the following human-readable documents:
+		\begin{itemize}[noitemsep]
+			\item \hyperref[chap:ANDAOAgreement]{\textbf{The Aragon Network DAO Agreement}}: the responsibilities and rights of \glspl{ANTHolder}.
+			\item \hyperref[chap:AragonManifesto]{\textbf{The Aragon Manifesto}}: the values and the mission of the \gls{AragonNetwork}.
+			\item \hyperref[chap:CommunityGuidelines]{\textbf{The Community Guidelines}}: the norms of behaviour between \glspl{ANTHolder}.
+			\item \hyperref[chap:AGPProcess]{\textbf{The \ac{AGP} Process}}: the process used by \glspl{ANTHolder} to govern the \gls{AragonNetworkDAO}
+		\end{itemize}
+	}
+}		
+
+\newglossaryentry{AragonNetworkDAO}{
+	type=key,
+	name={\acl{AN} \ac{DAO}},
+	description={
+		a \ac{DAO} (an open coordination protocol based on open blockchain technology) that aims to facilitate the governance of the Aragon Network’s tools, infrastructure and other common resources. The Aragon Network \ac{DAO} is governed by \glspl{ANTHolder} according to the \ac{AGP} Process and includes one or more Sub-\acp{DAO} also binded by this Charter.
+	}
+}
+
+\newglossaryentry{AragonNetworkToken}{
+	type=key,
+	name={\ac{ANT}},
+	description={
+		the native token of the \gls{AragonNetwork} - a transferable ERC-20 token with the contract address: \ethaddress{0xa117000000f279d81a1d3cc75430faa017fa5a2e}.
+		ANT is used for the governance of the Aragon Network DAO and other forms of participation in the Aragon Network.
+	}
+}
+
+\newglossaryentry{ANTHolder}{
+	type=key,
+	name={\ac{ANT} Holder},
+	description={
+		any entity that owns or controls an Ethereum account that controls a positive balance of \ac{ANT}.
+	}
+}
+
+\newglossaryentry{AragonCourt}{
+	type=key,
+	name={Aragon Court},
+	description={
+		a smart contract-based dispute resolution system governed by \glspl{ANTHolder}.
+	}
+}
+
+\newglossaryentry{AragonVoice}{
+	type=key,
+	name={Aragon Voice},
+	description={A token-based voting client with universally verifiable results and deterministic execution.
+	}
+}
+
+\newglossaryentry{CommunityMember}{
+	type=key,
+	name={Community Member},
+	description={
+		any \ac{ANT} Holder participating in the communication platforms, including Aragon’s Discord server, Aragon’s Telegram group, Aragon Forum, Aragon Network \ac{DAO}, online and offline gatherings, and/or other groups and platforms of the Aragon Network.
+	}
+}
+
+\newglossaryentry{FinancialActions}{
+	type=key, 
+	name={Financial Actions},
+	description={
+		any on-chain action that transfers, exchanges, or stakes tokens held by the \ac{AN} \ac{DAO} or Sub-\acp{DAO}.
+	}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Additional Definitions
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newglossaryentry{AragonNetworkCommunityPlatforms}{
+	type=add,
+	name={Aragon Network Community Platforms},
+	description={
+		the platforms used for regular communication by the \glspl{ANTHolder} and managed by either the Aragon Association or the \ac{AN} \ac{DAO}. They include but are not restricted to Aragon’s Discord Server, Aragon’s Forum, Aragon’s GitHub repository, and online and offline events organised under the Aragon brand.
+	}
+}
+
+\newglossaryentry{AragonNetworkOrganization}{
+	type=add,
+	name={Aragon Network organization},
+	description={
+		the Aragon organization addressed by the \ac{ENS} name\\ \ethaddress{network.aragonid.eth}, encompassing all apps installed on this organization.
+	}
+}
+
+\newglossaryentry{DecentralizedAutonomousOrganization}{
+	type=add,
+	name=\glslink{DAO}{DAO},
+	description={
+		an open-source blockchain protocol governed by a set of rules, with fluid affiliation or membership through participation, and that automatically execute certain actions without the need for intermediaries.
+	}
+}
+
+\newglossaryentry{EthereumNameService}{
+	type=add,
+	name={\ac{ENS}},
+	description={
+		a smart contract-based naming system. \ac{ENS} names are registered using the registry deployed at the Ethereum address \ethaddress{0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e}.
+	}
+}
+
+\newglossaryentry{Escrow}{
+	type=add,
+	name={Escrow},
+	description={
+		a contractual arrangement in which a third party (the stakeholder or escrow agent) receives and disburses money or property for the primary transacting parties, with the disbursement dependent on conditions agreed to by the transacting parties.
+	}
+}
+
+\newglossaryentry{EthereumBlockchain}{
+	type=add,
+	name={Ethereum blockchain},
+	description={
+		The blockchain referred to as ``Ethereum'' by the owner of the Ethereum trademark, the Ethereum Foundation (Stiftung Ethereum).
+	}
+}
+
+\newglossaryentry{Guardian}{
+	type=add,
+	name={Guardian},
+	description={
+		natural person (represented by a wallet address) that is eligible to be drafted to rule upon disputes in \gls{AragonCourt}. 
+		If a guardian is summoned, it must vote to allow or block the action being disputed, and can be rewarded (earn tokens) or punished (lose tokens) depending if they voted with the majority (default interpretation) or against it. 
+		The protocol is designed so that Guardians do not know each other and do not have contact when they are summoned.
+	}
+}
+
+
+\newglossaryentry{IPFSNetwork}{
+	type=add,
+	name={\ac{IPFS} network},
+	description={
+		A peer-to-peer hypermedia protocol, whose project website is located at \href{https://ipfs.io}{https://ipfs.io}. 
+		The public network makes files accessible to any internet-connected device running a compatible implementation of the \ac{IPFS} software.
+	}
+}
+
+\newglossaryentry{Metagovernance}{
+	type=add,
+	name={Metagovernance (``Metagov'')},
+	description={
+		refers to the process(es) to change the governance processes of the \gls{AragonNetworkDAO}.
+	}
+}
+
+\newglossaryentry{NetworkContract}{
+	type=add,
+	name={Network contract},
+	description={
+		The computer-interpreted source code of a smart contract governed by \glspl{ANTHolder}.
+	}
+}
+
+\newglossaryentry{NetworkParameters}{
+	type=add,
+	name={Network parameters},
+	description={
+		The current parameters of smart contracts governed by \glspl{ANTHolder}, which can be modified without amending the source code of the smart contract itself.
+	}
+}
+ 
+\newglossaryentry{Proposal}{
+	type=add,
+	name={Proposal},
+	description={
+		any suggested amendment to the Network contracts, Network parameters, the Agreements of the \gls{AragonNetwork} (i.e. \gls{AragonNetworkCharter} and composing agreements), and Agreements of any Sub-\acp{DAO}.
+	}
+}
+
+\newglossaryentry{SmartContract}{
+	type=add,
+	name={Smart contract},
+	description={
+		a software program deployed to a blockchain.
+	}
+}
+
+\newglossaryentry{OffChain}{
+	type=add,
+	name={Off-Chain},
+	description={
+		refers to any action or data entry that is not recorded on a blockchain or other type of distributed ledger where the smart contract (or version of it) is deployed or connected to so as to have verifiable and tamper-proof records.
+	}
+}
+
+\newglossaryentry{OnChain}{
+	type=add,
+	name={On-Chain},
+	description={
+		refers to any action or data entry that is recorded on a blockchain or other type of distributed ledger where the smart contract (or version of it) is deployed or connected to so as to have verifiable and tamper-proof records.
+	}
+}
+
+\newglossaryentry{OptimisticGovernance}{
+	type=add,
+	name={Optimistic Governance},
+	description={
+		the process of decisions being enacted with a time delay which allows time for a decision to be challenged. If a decision is not disputed then the change is enacted at the end of the time delay. This allows for much faster decision making and strategy decisions to be made.
+	}
+}
+
