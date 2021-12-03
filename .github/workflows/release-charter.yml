@@ -37,9 +37,6 @@ jobs:
 
       - name: Install ipfs-cluster-ctl and pin file on cluster
         id: ipfs
-        env:
-          IPFS_CLUSTER_BASIC_AUTH: ${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}
-          IPFS_CLUSTER_HOST: ${{ secrets.IPFS_CLUSTER_HOST }}
         run: |
           wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.1/ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
           tar xvfz ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
