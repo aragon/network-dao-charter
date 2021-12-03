@@ -1,0 +1,74 @@
+name: "Release the Aragon Network DAO Charter"
+
+on:
+  push:
+    # Pattern matched against refs/tags
+    tags:
+      - "*" # Push events to every tag not containing /
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Tectonic Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/Tectonic
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
+          restore-keys: |
+            ${{ runner.os }}-tectonic-
+
+      - name: Tectonic Setup
+        uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Gitinfo
+        run: ./gitinfo.sh
+
+      - name: Tectonic Run 1
+        run: tectonic network-dao-charter.tex
+
+      - name: Tectonic Run 2
+        run: tectonic network-dao-charter.tex
+
+      - name: Install ipfs-cluster-ctl and pin file on cluster
+        id: ipfs
+        env:
+          IPFS_CLUSTER_BASIC_AUTH: ${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}
+          IPFS_CLUSTER_HOST: ${{ secrets.IPFS_CLUSTER_HOST }}
+        run: |
+          wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.1/ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
+          tar xvfz ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
+          CID=$(ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth '${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}' --host '${{ secrets.IPFS_CLUSTER_HOST }}' add -q ./network-dao-charter.pdf)
+          ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth '${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}' --host '${{ secrets.IPFS_CLUSTER_HOST }}' pin add $CID
+          echo "::set-output name=cid::$CID"
+
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.cid }})"
+
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./network-dao-charter.pdf
+          asset_name: "Aragon_Network_DAO_Charter_${{ env.RELEASE_VERSION }}.pdf"
+          asset_content_type: application/pdf
