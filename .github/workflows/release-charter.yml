@@ -35,16 +35,17 @@ jobs:
       - name: Tectonic Run 2
         run: tectonic network-dao-charter.tex
 
-      - name: Upload to IPFS
-        id: upload
-        uses: aquiladev/ipfs-action@v0.1.6
-        with:
-          path: ./network-dao-charter.pdf
-          host: ipfs.komputing.org
-          port: 443
-          protocol: https
-          timeout: 180000
-          verbose: false
+      - name: Install ipfs-cluster-ctl and pin file on cluster
+        id: ipfs
+        env: 
+          IPFS_CLUSTER_BASIC_AUTH: ${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}
+          IPFS_CLUSTER_HOST: ${{ secrets.IPFS_CLUSTER_HOST }}
+        run: |
+          wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.1/ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
+          tar xvfz ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
+          CID=$($GITHUB_WORKSPACE/ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth $IPFS_CLUSTER_BASIC_AUTH --host "$IPFS_CLUSTER_HOST" add -q ./network-dao-charter.pdf)
+          $GITHUB_WORKSPACE/ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth $IPFS_CLUSTER_BASIC_AUTH --host "$IPFS_CLUSTER_HOST" pin add $CID
+          echo "::set-output name=cid::$CID" 
       
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
@@ -59,7 +60,7 @@ jobs:
           release_name: ${{ github.ref }}
           draft: false
           prerelease: false
-          body: "**IPFS CID:** [${{ steps.upload.outputs.hash }}](https://ipfs.io/ipfs/${{ steps.upload.outputs.hash }})"
+          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.cid }})"
                   
       - name: Upload Release Asset
         id: upload-release-asset 
