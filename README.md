@@ -24,10 +24,11 @@ If you would like to apply corrections or amendments to the charter, please
 
 ## Versioning of the Charter
 
-The versioning of this Charter follows the [Semantic Versioning for Documents and Meaningful Manual Version Control (SemVerDoc)](https://semverdoc.org/) convention:
+The versioning of this Charter follows the [Semantic Versioning for Documents and Meaningful Manual Version Control (SemVerDoc)](https://semverdoc.org/) convention.
 
 Given a version number `MAJOR.MINOR.PATCH`, increment the:
 1. `MAJOR` version when your document has undergone significant changes,
 2. `MINOR` version when new information has been added to the document or information has been removed from the document, and
 3. `PATCH` version when you made minor changes (e.g. fixing typos).
-Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+Additional labels for pre-release and build metadata are available as extensions to the `MAJOR.MINOR.PATCH` format.
