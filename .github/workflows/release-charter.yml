@@ -43,7 +43,7 @@ jobs:
         run: |
           wget https://dist.ipfs.io/ipfs-cluster-ctl/v0.14.1/ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
           tar xvfz ipfs-cluster-ctl_v0.14.1_linux-amd64.tar.gz
-          CID=$(ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth '${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}' --host '${{ secrets.IPFS_CLUSTER_HOST }}' add -q ./network-dao-charter.pdf)
+          CID=$(ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth '${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}' --host '${{ secrets.IPFS_CLUSTER_HOST }}' add --cid-version 1 --quiet network-dao-charter.pdf)
           ipfs-cluster-ctl/ipfs-cluster-ctl --basic-auth '${{ secrets.IPFS_CLUSTER_BASIC_AUTH }}' --host '${{ secrets.IPFS_CLUSTER_HOST }}' pin add $CID
           echo "::set-output name=cid::$CID"
 
@@ -60,7 +60,7 @@ jobs:
           release_name: ${{ github.ref }}
           draft: false
           prerelease: false
-          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.cid }})"
+          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.cid }}?filename=Aragon_Network_DAO_Charter_${{ env.RELEASE_VERSION }}.pdf)"
 
       - name: Upload Release Asset
         id: upload-release-asset
