@@ -1,4 +1,3 @@
-%!TEX root = network-dao-charter.tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
 % Additional Title Field
@@ -96,23 +95,6 @@
 \setlist[enumerate,2]{label=\alph*.}
 \setlist[enumerate,3]{label=\roman*.}
 
-\RedeclareSectionCommand[beforeskip=1mm,afterskip=1mm]{subsubsection}
-\renewcommand*{\thechapter}{}
-\renewcommand*{\chapterformat}{}% No number no space
-\renewcommand*{\chaptermarkformat}{}% No number no space
-\counterwithout{section}{chapter}
-
-%\setcounter{secnumdepth}{\subparagraphnumdepth}% number every sectioning level from \part till \subparagraph (not recommended to do so)
-%\setcounter{tocdepth}{\subparagraphtocdepth}% add every sectioning level from \part till \subparagraph to the ToC (not recommended to do so)
-
-\newcommand{\restartnumbering}{%
-	\setcounter{page}{1}%
-	\setcounter{section}{0}%
-	\setcounter{subsection}{0}%
-	\setcounter{subsubsection}{0}%
-	\restartlist{enumerate}%
-}
-
 \newglossarystyle{charter}{%
 	\setglossarystyle{list}%
 	\renewcommand*{\glossentry}[2]{%
@@ -124,4 +106,16 @@
 % Ethereum Mainnet Addresses
 \newcommand{\ethaddress}[1]{
 	\href{https://etherscan.io/address/#1}{\texttt{#1}}
+}
+
+\newcommand{\mytitle}{
+	\begin{center}
+		{\includegraphics[width=2cm]{graphics/Aragon-Logo.pdf}}\\[2mm]
+		{\LARGE \textbf{\@title}}\\[2mm]
+		{\large as per Aragon Network DAO Charter}\\[1mm] 
+		{\large \texttt{\@subtitle}}\\[2mm]
+		{\large authored by the \@author}\\[1mm]
+		{\large on \@date}\\[2mm]
+		The source files of this document are found on \href{https://github.com/aragon/network-dao-charter}{github.com/aragon/network-dao-charter}.
+	\end{center}
 }
