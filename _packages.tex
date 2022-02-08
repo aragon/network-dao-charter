@@ -16,6 +16,9 @@
 ]{geometry}
 \usepackage{booktabs}
 
+\usepackage{changes}				% DELETE IN PRODUCTION
+\presetkeys{todonotes}{inline}{}	% DELETE IN PRODUCTION
+
 % Coloring, Graphics, and Hyperlinks
 \usepackage{xcolor,graphicx}
 \definecolor{Aragon-Blue}{rgb}{0.2353,0.5412,1}
@@ -89,10 +92,36 @@
 	topsep=4pt,
 	parsep=0.5\parskip
 }
-\setlistdepth{5}
-\renewlist{enumerate}{enumerate}{5}
-\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,1]{label=\S\arabic*.,resume}
 \setlist[enumerate,2]{label=\alph*.}
 \setlist[enumerate,3]{label=\roman*.}
-\setlist[enumerate,4]{label=\arabic*.}
-\setlist[enumerate,5]{label=\alph*.}
+
+\RedeclareSectionCommand[beforeskip=1mm,afterskip=1mm]{subsubsection}
+\renewcommand*{\thechapter}{}
+\renewcommand*{\chapterformat}{}% No number no space
+\renewcommand*{\chaptermarkformat}{}% No number no space
+\counterwithout{section}{chapter}
+
+%\setcounter{secnumdepth}{\subparagraphnumdepth}% number every sectioning level from \part till \subparagraph (not recommended to do so)
+%\setcounter{tocdepth}{\subparagraphtocdepth}% add every sectioning level from \part till \subparagraph to the ToC (not recommended to do so)
+
+\newcommand{\restartnumbering}{%
+	\setcounter{page}{1}%
+	\setcounter{section}{0}%
+	\setcounter{subsection}{0}%
+	\setcounter{subsubsection}{0}%
+	\restartlist{enumerate}%
+}
+
+\newglossarystyle{charter}{%
+	\setglossarystyle{list}%
+	\renewcommand*{\glossentry}[2]{%
+		\item[\glsentryitem{##1}%
+		\glstarget{##1}{\glossentryname{##1}:}]
+		\glossentrydesc{##1}\glspostdescription\space ##2}
+}
+
+% Ethereum Mainnet Addresses
+\newcommand{\ethaddress}[1]{
+	\href{https://etherscan.io/address/#1}{\texttt{#1}}
+}
