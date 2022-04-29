@@ -26,8 +26,8 @@ jobs:
       - name: Create Gitinfo
         run: ./gitinfo.sh
 
-      - name: Tectonic Run 1
-        run: tectonic network-dao-charter.tex
-
-      - name: Tectonic Run 2
-        run: tectonic network-dao-charter.tex
+      - name: Tectonic Run
+        run: |
+          for f in $(find . -regex '\.\/[0-9A-Z]+-.+\.tex'); do 
+            tectonic -r 1 $f 
+          done 
