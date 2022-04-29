@@ -26,8 +26,11 @@ jobs:
       - name: Create Gitinfo
         run: ./gitinfo.sh
 
-      - name: Tectonic Run
+      - name: Build sub pages
         run: |
-          for f in $(find . -regex '\.\/[1-9]-.+\.tex'); do 
+          for f in $(find . -regex '\.\/[1-8]-.+\.tex'); do 
             tectonic -r 1 $f 
           done 
+
+      - name: Build charter
+        run: tectonic -r 1 network-dao-charter.tex
