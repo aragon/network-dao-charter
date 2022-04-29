@@ -32,7 +32,7 @@ jobs:
 
       - name: Tectonic Run
         run: |
-          for f in $(find . -regex '\.\/[0-9A-Z]+-.+\.tex'); do 
+          for f in $(find . -regex '\.\/[1-9]-.+\.tex'); do 
             tectonic -r 1 $f 
           done 
 
