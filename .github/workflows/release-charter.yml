@@ -18,7 +18,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.cache/Tectonic
-          key: ${{ runner.os }}-tectonic-$  {{ hashFiles('**/*.tex') }}
+          key: ${{ runner.os }}-tectonic-${{ hashFiles('**/*.tex') }}
           restore-keys: |
             ${{ runner.os }}-tectonic-
 
@@ -53,7 +53,7 @@ jobs:
       - name: Set release params
         id: release_params
         run: |
-          echo "::set-output name=version::${GITHUB_REF##/refs/tags/}"
+          echo "::set-output name=version::${GITHUB_REF##refs/tags/}"
 
 
       - name: Release
@@ -62,7 +62,7 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           name: ${{ steps.release_params.outputs.version }}
-          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.io/ipfs/${{ steps.ipfs.outputs.cid }}?filename=Aragon_Network_DAO_Charter_${{ steps.release_params.outputs.version }}.pdf)"
+          body: "**IPFS CID:** [${{ steps.ipfs.outputs.cid }}](https://ipfs.aragon.network/ipfs/${{ steps.ipfs.outputs.cid }}?filename=Aragon_Network_DAO_Charter_${{ steps.release_params.outputs.version }}.pdf)"
           draft: false
           prerelease: false
           files: |
