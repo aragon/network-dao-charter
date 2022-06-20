@@ -8,7 +8,6 @@
 ]{scrreprt}
 
 \input{_packages.tex}
-\input{_formatting.tex}
 \input{_eth-addresses.tex}
 
 \title{Aragon Network DAO Charter}
@@ -16,16 +15,16 @@
 \author{Aragon Network}
 \date{\today}
 
-\input{A-acronyms-and-definitions.tex}
+\usepackage{pdfpages}
 
 \begin{document}
 	\input{0-titlepage.tex}
-	\input{1-introduction.tex}
-	\input{2-aragon-network-dao-agreement.tex}
-	\input{3-aragon-manifesto.tex}
-	\input{4-community-guidelines.tex}
-	\input{5-aragon-governance-proposal-process.tex}
-	\input{6-sub-dao-agreements.tex}
-	\input{7-dao-parameters.tex}
-	\input{8-glossaries.tex}
+	\includepdf[pages=-]{1-introduction.pdf}
+	\includepdf[pages=-]{2-aragon-network-dao-agreement.pdf}
+	\includepdf[pages=-]{3-aragon-manifesto.pdf}
+	\includepdf[pages=-]{4-community-guidelines.pdf}
+	\includepdf[pages=-]{5-aragon-governance-proposal-process.pdf}
+	\includepdf[pages=-]{6-sub-dao-agreements.pdf}
+	\includepdf[pages=-]{7-dao-parameters.pdf}
+	\includepdf[pages=-]{8-glossaries.pdf}
 \end{document}
