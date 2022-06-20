@@ -13,17 +13,18 @@
 		\toprule
 		\# & Name & Value \\
 		\midrule
-		1 & \ac{DAO} identifier & \href{https://govern.aragon.org/\#/daos/an_main_dao}{\texttt{an\_main\_dao}}\\
-		2 & \ac{DAO} smart contract address & \mainDaoAddr\\
-		3 & \ac{DAO} token name & Aragon Network Token\\
-		4 & \ac{DAO} token symbol & \texttt{\ac{ANT}}\\
-		5 & \ac{DAO} token address & \mainDaoTokenAddr\\
-		6 & Execution delay & 5 days (432\,000 seconds)\\
-		7 & Rules/Agreement & This Charter document\\
-		8 & Dispute Resolution Client & \aragonCourtAddr\\
-		9 & Collateral token & \antTokenAddr\\
-		10 & Collateral token amount & 50~\ac{ANT}\\
-		11 & Whitelist addresses & all \glspl{ANTHolder}\\
+		 1 & Identifier					& \href{https://govern.aragon.org/\#/daos/an_main_dao}{\texttt{an\_main\_dao}}\\
+		 2 & Executor address			& \mainDaoAddr\\
+		 3 & Queue address				& \mainDaoQueueAddr\\
+		 4 & Governance token name		& Aragon Network Token\\
+		 5 & Governance token symbol	& \texttt{\ac{ANT}}\\
+		 6 & Governance token address	& \mainDaoTokenAddr\\
+		 7 & Execution delay			& 5 days (432\,000 seconds)\\
+		 8 & Rules/Agreement			& This Charter document\\
+		 9 & Dispute resolution client	& \aragonCourtAddr\\
+		10 & Collateral token			& \antTokenAddr\\
+		11 & Collateral token amount	& 50~\ac{ANT}\\
+		12 & Whitelist addresses 		& any address\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -38,21 +39,22 @@
 		\toprule
 		\# & Name & Value \\
 		\midrule
-		1 & \ac{DAO} identifier & \href{https://govern.aragon.org/\#/daos/an_exec_dao}{\texttt{an\_exec\_dao}}\\
-		2 & \ac{DAO} smart contract address & \execSubDaoAddr\\
-		3 & \ac{DAO} token name & ExecutiveCommitteeToken\\
-		4 & \ac{DAO} token symbol & \texttt{EXE}\\
-		5 & \ac{DAO} token address & \execSubDaoTokenAddr\\
-		6 & Execution delay & 7~days (604\,800 seconds)\\
-		7 & Rules/Agreement & This Charter document\\
-		8 & Dispute Resolution Client & \aragonCourtAddr\\
-		9 & Collateral token & \antTokenAddr\\
-		10 & Collateral token amount & 50~\ac{ANT}\\
-		11 & Whitelist addresses \\
-		& Main \ac{DAO} & \mainDaoAddr\\
-		& Member 1 & \execSubDaoMemberAddrI\\
-		& Member 2 & \execSubDaoMemberAddrII\\
-		& Member 3 & \execSubDaoMemberAddrIII\\
+		 1 & Identifier					& \href{https://govern.aragon.org/\#/daos/an_exec_dao}{\texttt{an\_exec\_dao}}\\
+		 2 & Executor address			& \execSubDaoAddr\\
+		 3 & Queue address				& \execSubDaoQueueAddr\\
+		 4 & Governance token name		& ExecutiveCommitteeToken\\
+		 5 & Governance token symbol	& \texttt{EXE}\\
+		 6 & Governance token address	& \execSubDaoTokenAddr\\
+		 7 & Execution delay			& 7~days (604\,800 seconds)\\
+		 8 & Rules/Agreement			& This Charter document\\
+		 9 & Dispute resolution client	& \aragonCourtAddr\\
+		10 & Collateral token			& \antTokenAddr\\
+		11 & Collateral token amount	& 50~\ac{ANT}\\
+		12 & Whitelist addresses 		& \\
+			& Main \ac{DAO}				& \mainDaoAddr\\
+			& Member 1 					& \execSubDaoMemberAddrI\\
+			& Member 2 					& \execSubDaoMemberAddrII\\
+			& Member 3 					& \execSubDaoMemberAddrIII\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -68,21 +70,22 @@
 		\toprule
 		\# & Name & Value \\
 		\midrule
-		1 & \ac{DAO} identifier & \href{https://govern.aragon.org/\#/daos/an_tech_dao}{\texttt{an\_tech\_dao}}\\
-		2 & \ac{DAO} smart contract address & \techSubDaoAddr\\
-		3 & \ac{DAO} token name & TechCommitteeToken\\
-		4 & \ac{DAO} token symbol & \texttt{TECH}\\
-		5 & \ac{DAO} token address & \techSubDaoTokenAddr\\
-		6 & Execution delay & 3~days (259\,200~seconds)\\
-		7 & Rules/Agreement & This Charter document\\
-		8 & Dispute Resolution Client & \aragonCourtAddr\\
-		9 & Collateral token & \antTokenAddr\\
-		10 & Collateral token amount & 50~\ac{ANT}\\
-		11 & Whitelist addresses \\
-		& Main \ac{DAO} & \mainDaoAddr\\
-		& Member 1 & \techSubDaoMemberAddrI\\
-		& Member 2 & \techSubDaoMemberAddrII\\
-		& Member 3 & \techSubDaoMemberAddrIII\\
+		 1 & Identifier					& \href{https://govern.aragon.org/\#/daos/an_tech_dao}{\texttt{an\_tech\_dao}}\\
+		 2 & Executor address			& \techSubDaoAddr\\
+		 3 & Queue address				& \techSubDaoQueueAddr\\
+		 4 & Governance token name		& TechCommitteeToken\\
+		 5 & Governance token symbol	& \texttt{TECH}\\
+		 6 & Governance token address	& \techSubDaoTokenAddr\\
+		 7 & Execution delay			& 3~days (259\,200~seconds)\\
+		 8 & Rules/Agreement			& This Charter document\\
+		 9 & Dispute resolution client	& \aragonCourtAddr\\
+		10 & Collateral token			& \antTokenAddr\\
+		11 & Collateral token amount	& 50~\ac{ANT}\\
+		12 & Whitelist addresses 		& \\
+			& Main \ac{DAO} 			& \mainDaoAddr\\
+			& Member 1 					& \techSubDaoMemberAddrI\\
+			& Member 2 					& \techSubDaoMemberAddrII\\
+			& Member 3 					& \techSubDaoMemberAddrIII\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -98,21 +101,22 @@
 		\toprule
 		\# & Name & Value \\
 		\midrule
-		1 & \ac{DAO} identifier & \href{https://govern.aragon.org/\#/daos/an_compliance_dao}{\texttt{an\_compliance\_dao}}\\
-		2 & \ac{DAO} smart contract address & \cmplSubDaoAddr\\
-		3 & \ac{DAO} token name & ComplianceCommitteeToken\\
-		4 & \ac{DAO} token symbol & \texttt{CMPL}\\
-		5 & \ac{DAO} token address & \cmplSubDaoTokenAddr\\
-		6 & Execution delay & 3~hours (10\,800~seconds)\\
-		7 & Rules/Agreement & This Charter document\\
-		8 & Dispute Resolution Client & \aragonCourtAddr\\
-		9 & Collateral token & \antTokenAddr\\
-		10 & Collateral token amount & 50~\ac{ANT}\\
-		11 & Whitelist addresses \\
-		& Main \ac{DAO} & \mainDaoAddr\\
-		& Member 1 & \cmplSubDaoMemberAddrI\\
-		& Member 2 & \cmplSubDaoMemberAddrII\\
-		& Member 3 & \cmplSubDaoMemberAddrIII\\
+		 1 & Identifier 				& \href{https://govern.aragon.org/\#/daos/an_compliance_dao}{\texttt{an\_compliance\_dao}}\\
+		 2 & Executor address			& \cmplSubDaoAddr\\
+		 3 & Queue address				& \cmplSubDaoQueueAddr\\
+		 4 & Governance token name		& ComplianceCommitteeToken\\
+		 5 & Governance token symbol	& \texttt{CMPL}\\
+		 6 & Governance token address	& \cmplSubDaoTokenAddr\\
+		 7 & Execution delay			& 3~hours (10\,800~seconds)\\
+		 8 & Rules/Agreement			& This Charter document\\
+		 9 & Dispute resolution client	& \aragonCourtAddr\\
+		10 & Collateral token			& \antTokenAddr\\
+		11 & Collateral token amount	& 50~\ac{ANT}\\
+		12 & Whitelist addresses 		& \\
+			& Main \ac{DAO} 			& \mainDaoAddr\\
+			& Member 1 					& \cmplSubDaoMemberAddrI\\
+			& Member 2					& \cmplSubDaoMemberAddrII\\
+			& Member 3					& \cmplSubDaoMemberAddrIII\\
 		\bottomrule
 	\end{tabular}
 \end{table}
