@@ -1,4 +1,3 @@
-%!TEX root = network-dao-charter.tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
 % Additional Title Field
@@ -15,6 +14,9 @@
 	left=2.5cm
 ]{geometry}
 \usepackage{booktabs}
+
+%\usepackage{changes}				% DELETE IN PRODUCTION
+%\presetkeys{todonotes}{inline}{}	% DELETE IN PRODUCTION
 
 % Coloring, Graphics, and Hyperlinks
 \usepackage{xcolor,graphicx}
@@ -43,8 +45,7 @@
 ]{glossaries-extra}
 \setabbreviationstyle[acronym]{long-short}
 
-\newglossary[klg]{key}{kld}{kdn}{Key Definitions}
-\newglossary[llg]{add}{lld}{ldn}{Additional Definitions}
+\newglossary[klg]{key}{kld}{kdn}{Definitions}
 \makenoidxglossaries
 
 % Custom Fonts
@@ -89,10 +90,31 @@
 	topsep=4pt,
 	parsep=0.5\parskip
 }
-\setlistdepth{5}
-\renewlist{enumerate}{enumerate}{5}
-\setlist[enumerate,1]{label=\arabic*.}
+\setlist[enumerate,1]{label=\S\arabic*.,resume}
 \setlist[enumerate,2]{label=\alph*.}
 \setlist[enumerate,3]{label=\roman*.}
-\setlist[enumerate,4]{label=\arabic*.}
-\setlist[enumerate,5]{label=\alph*.}
+
+\newglossarystyle{charter}{%
+	\setglossarystyle{list}%
+	\renewcommand*{\glossentry}[2]{%
+		\item[\glsentryitem{##1}%
+		\glstarget{##1}{\glossentryname{##1}:}]
+		\glossentrydesc{##1}\glspostdescription\space ##2}
+}
+
+% Ethereum Mainnet Addresses
+\newcommand{\ethaddress}[1]{
+	\href{https://etherscan.io/address/#1}{\texttt{#1}}
+}
+
+\newcommand{\mytitle}{
+	\begin{center}
+		{\includegraphics[width=2cm]{graphics/Aragon-Logo.pdf}}\\[2mm]
+		{\LARGE \textbf{\@title}}\\[2mm]
+		{\large as per Aragon Network DAO Charter}\\[1mm] 
+		{\large \texttt{\@subtitle}}\\[2mm]
+		{\large authored by the \@author}\\[1mm]
+		{\large on \@date}\\[2mm]
+		The source files of this document are found on \href{https://github.com/aragon/network-dao-charter}{github.com/aragon/network-dao-charter}.
+	\end{center}
+}

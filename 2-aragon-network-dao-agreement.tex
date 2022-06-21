@@ -1,141 +1,132 @@
-%!TEX root = network-dao-charter.tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
-\charterchapter{The Aragon Network DAO Agreement}
-\label{chap:ANDAOAgreement}
+\title{The Aragon Network Agreement}
+\input{_header.tex}
 
+\begin{document}
+\mytitle
+
+\section{Immutable Guidelines}
+\label{sec:ImmutableGuidelines}
+
+The guidelines in this section shall not be amended and shall apply to all proposals submitted to the \gls{AragonNetwork} \ac{DAO}(s).
+If any other guidelines in this Agreement conflict with these immutable guidelines, the immutable guidelines shall take priority for enforcement purposes.
+
+
+\subsection{Proposal Compliance}
 \begin{enumerate}
-	\sectionitem{Immutable Guidelines}
-	\label{sec:ImmutableGuidelines}
+	\item Proposals must be governed by this Agreement, or a future version of this Agreement as modified within the bounds of the Agreement.
+	\item Proposals must not disproportionately benefit a majority of \glspl{ANTHolder} voting on a proposal over the minority.
+	\item \ac{ANT} held by the Main \ac{DAO} and/or Sub-\acp{DAO} must not be used to influence proposals nor votes, nor be staked in \gls{AragonCourt}.
+\end{enumerate}
+
+
+\section{Mutable Guidelines}
+\label{sec:MutableGuidelines}
+
+The guidelines in this section may be amended.
+These guidelines apply to all proposals put forth to the \gls{AragonNetwork}.
+
 	
-	The guidelines in this section shall not be amended and shall apply to all proposals submitted to the \gls{AragonNetwork} \ac{DAO}(s).
-	If any other guidelines in this Agreement conflict with these immutable guidelines, the immutable guidelines shall take priority for enforcement purposes.
+\subsection{Proposal Compliance}
+\begin{enumerate}
+	\item Proposals must be consistent with  
+	\hyperref[chap:ANDAOAgreement]{The Aragon Network DAO Agreement}, 
+	\hyperref[chap:AragonManifesto]{Aragon Manifesto}, 
+	\hyperref[chap:CommunityGuidelines]{The Community Guidelines}, and 
+	\hyperref[chap:AGPProcess]{The \ac{AGP} Process}, and if relevant any 
+	\hyperref[chap:SubDAOAgreements]{Sub-\ac{DAO} Agreements}, 
+	or a revised version of these documents approved by the community (approved as defined in the \gls{AragonNetworkCharter}).
+	\item Proposal must not contain directly, by direct link, or indirectly any non-consensual imagery, child abuse imagery, threats of violence and incitement, hate speech, bullying and harassment, sexual or human exploitation, illegal or certain regulated activities or matters, malware, spyware, or material that is owned via copyright, trademark or otherwise by someone other than one of the proposal authors (unless use of said material is permitted by the copyright owner or otherwise protected under other legal standards).
+	\item Proposals must be accompanied by an accurate English-language
+	Justification for the proposal\footnote[1]{
+		Typos in the Justification shall be allowed if they do not substantially alter the meaning of the proposal.
+		Each Justification must be referred to in the on-chain source code or transaction data of the proposal by the content-addressed location of the Justification on the public \gls{IPFSNetwork}, and the Justification must be accessible via the public \gls{IPFSNetwork} for as long as the proposal is open for voting and/or in effect.
+		If a Justification becomes temporarily inaccessible via the public \gls{IPFSNetwork}, and its proposal is challenged under this guideline, then \glspl{Guardian} should block the proposal if they have reason to believe the Justification was inaccessible at the time that the proposal was challenged.
+		Alternatively, the Justification may be encoded directly into the on-chain source code or transaction data of the proposal so that the Justification remains human-readable and accessible as long as the Ethereum blockchain itself remains publicly available.
+	}.
+	The Justification must include the following information:
 	\begin{enumerate}
-		
-		\subsectionitem{Proposal Compliance}
-		\begin{enumerate}
-			\item Proposals must be governed by this Agreement, or a future version of this Agreement as modified within the bounds of the Agreement.
-			\item Proposals must not disproportionately benefit a majority of \glspl{ANTHolder} voting on a proposal over the minority.
-			\item \ac{ANT} held by the Main \ac{DAO} and/or Sub-\acp{DAO} must not be used to influence proposals nor votes, nor be staked in \gls{AragonCourt}.
-		\end{enumerate}
-	
+		\item The name(s) and/or username(s) of the author(s) of the proposal.
+		The author(s) should be the primary point of contact for any questions or comments regarding the proposal.
+		\item The author’s preferred contact method, in case anyone has questions or comments regarding the proposal.
+		\item An accurate summary of the proposal in 280 characters or less.
+		\item A rationale section detailing the author’s reason(s) for creating thecproposal.
+		\item An accurate, long-form description of what the proposal will do if enacted, including the collective benefit in relation to the Aragon manifesto for the community around the \gls{AragonNetwork}.
+		\item The limitations of any benefits mentioned above or otherwise unaddressed areas of the problem space or possibility space.
+		\item A section acknowledging, by title and author(s), any similar or related prior work known to the proposal author(s).
 	\end{enumerate}
 
-	\sectionitem{Mutable Guidelines}
-	\label{sec:MutableGuidelines}
+	\item If the proposal amends one or more Network contracts, then a security audit report of the Network contract amendment may be carried out and deemed passed (as defined in the \ac{AGP} Process).
+	\item If a proposal deploys a new \gls{AragonCourt} \glspl{Guardian} Registry contract and/or
+	amends \gls{AragonCourt} to use a new \glspl{Guardian} Registry, then the new \glspl{Guardian} Registry must use \ac{ANT} as the native \gls{Guardian} token.
+	\item Proposals must not use the \gls{AragonNetwork} \ac{DAO} or Sub-\acp{DAO} role as \gls{AragonCourt} funds governor to transfer \ac{ANT} staked and/or activated by \gls{AragonCourt} \glspl{Guardian} to another account outside of \gls{AragonNetwork} \ac{DAO} or Sub-\acp{DAO}.
+\end{enumerate}
 
-	The guidelines in this section may be amended.
-	These guidelines apply to all proposals put forth to the \gls{AragonNetwork}.
+\subsection{Disputes}
+\begin{enumerate}
+	\item Disputes over any proposal relying on this Agreement must be resolved by \gls{AragonCourt}.
+	\item Other disputes between \glspl{ANTHolder} should be resolved according to the Community Guidelines or by the following incremental processes as needed: dialogue, facilitation, mediation, and arbitration (by default \gls{AragonCourt}).
+	Unless a participant is unable to participate for legal or psychological reasons, the order for choosing the appropriate mechanism is first to last as described above.
+\end{enumerate}
+
+\subsection{Representation \& Warranties}
+
+\glspl{ANTHolder} and other participants or natural or legal persons that interact with the \gls{AragonNetwork} represent and warrant that:
+\begin{enumerate}
+	\item They can be legally bound by this Charter according to their applicable laws.
+	\item  Their participation or interaction with the \gls{AragonNetwork} is always in compliance with applicable laws, including but not limited to anti-corruption laws.
+	\item  They will be solely responsible to comply with all applicable tax laws, including, but not limited to, the reporting and payment of income tax, social security, wealth tax or similar taxes.
+	\item  Blockchain technology and distributed-ledger technology in general is untested and outside anyone’s exclusive control, and adverse changes in market forces or the technology, broadly construed, will excuse the performance of the \gls{AragonNetwork}.
+	\item They understand the governance procedure and applicable rules of the \gls{AragonNetwork} and especially the smart contracts' functioning and limitations.
+	\item They understand the following risks, associated to the use of blockchain, crypto-assets and therefore the \gls{AragonNetwork}, which they agree to take at their sole responsibility, including but not limited to risk associated with:
 	\begin{enumerate}
-		
-		\subsectionitem{Proposal Compliance}
-		\begin{enumerate}
-			\item Proposals must be consistent with  
-			\hyperref[chap:ANDAOAgreement]{The Aragon Network DAO Agreement}, 
-			\hyperref[chap:AragonManifesto]{Aragon Manifesto}, 
-			\hyperref[chap:CommunityGuidelines]{The Community Guidelines}, and 
-			\hyperref[chap:AGPProcess]{The \ac{AGP} Process}, and if relevant any 
-			\hyperref[chap:SubDAOAgreements]{Sub-\ac{DAO} Agreements}, 
-			or a revised version of these documents approved by the community (approved as defined in the \gls{AragonNetworkCharter}).
-			\item Proposal must not contain directly, by direct link, or indirectly any non-consensual imagery, child abuse imagery, threats of violence and incitement, hate speech, bullying and harassment, sexual or human exploitation, illegal or certain regulated activities or matters, malware, spyware, or material that is owned via copyright, trademark or otherwise by someone other than one of the proposal authors (unless use of said material is permitted by the copyright owner or otherwise protected under other legal standards).
-			\item Proposals must be accompanied by an accurate English-language
-			Justification for the proposal\footnote[1]{
-				Typos in the Justification shall be allowed if they do not substantially alter the meaning of the proposal.
-				Each Justification must be referred to in the on-chain source code or transaction data of the proposal by the content-addressed location of the Justification on the public \gls{IPFSNetwork}, and the Justification must be accessible via the public \gls{IPFSNetwork} for as long as the proposal is open for voting and/or in effect.
-				If a Justification becomes temporarily inaccessible via the public \gls{IPFSNetwork}, and its proposal is challenged under this guideline, then \glspl{Guardian} should block the proposal if they have reason to believe the Justification was inaccessible at the time that the proposal was challenged.
-				Alternatively, the Justification may be encoded directly into the on-chain source code or transaction data of the proposal so that the Justification remains human-readable and accessible as long as the Ethereum blockchain itself remains publicly available.
-			}.
-			The Justification must include the following information:
-			\begin{enumerate}
-				\item The name(s) and/or username(s) of the author(s) of the proposal.
-				The author(s) should be the primary point of contact for any questions or comments regarding the proposal.
-				\item The author’s preferred contact method, in case anyone has questions or comments regarding the proposal.
-				\item An accurate summary of the proposal in 280 characters or less.
-				\item A rationale section detailing the author’s reason(s) for creating thecproposal.
-				\item An accurate, long-form description of what the proposal will do if enacted, including the collective benefit in relation to the Aragon manifesto for the community around the \gls{AragonNetwork}.
-				\item The limitations of any benefits mentioned above or otherwise unaddressed areas of the problem space or possibility space.
-				\item A section acknowledging, by title and author(s), any similar or related prior work known to the proposal author(s).
-			\end{enumerate}
-		
-			\item If the proposal amends one or more Network contracts, then a security audit report of the Network contract amendment may be carried out and deemed passed (as defined in the \ac{AGP} Process).
-			\item If a proposal deploys a new \gls{AragonCourt} \glspl{Guardian} Registry contract and/or
-			amends \gls{AragonCourt} to use a new \glspl{Guardian} Registry, then the new \glspl{Guardian} Registry must use \ac{ANT} as the native \gls{Guardian} token.
-			\item Proposals must not use the \gls{AragonNetwork} \ac{DAO} or Sub-\acp{DAO} role as \gls{AragonCourt} funds governor to transfer \ac{ANT} staked and/or activated by \gls{AragonCourt} \glspl{Guardian} to another account outside of \gls{AragonNetwork} \ac{DAO} or Sub-\acp{DAO}.
-		\end{enumerate}
-
-		\subsectionitem{Disputes}
-		\begin{enumerate}
-			\item Disputes over any proposal relying on this Agreement must be resolved by \gls{AragonCourt}.
-			\item Other disputes between \glspl{ANTHolder} should be resolved according to the Community Guidelines or by the following incremental processes as needed: dialogue, facilitation, mediation, and arbitration (by default \gls{AragonCourt}).
-			Unless a participant is unable to participate for legal or psychological reasons, the order for choosing the appropriate mechanism is first to last as described above.
-		\end{enumerate}
-
-		\subsectionitem{Representation \& Warranties}
-		\begin{enumerate}
-			\item \glspl{ANTHolder} and other participants or natural or legal persons that interact with the \gls{AragonNetwork} represent and warrant that:
-			\begin{enumerate}
-				\item They can be legally bound by this Charter according to their applicable laws.
-				\item  Their participation or interaction with the \gls{AragonNetwork} is always in compliance with applicable laws, including but not limited to anti-corruption laws.
-				\item  They will be solely responsible to comply with all applicable tax laws, including, but not limited to, the reporting and payment of income tax, social security, wealth tax or similar taxes.
-				\item  Blockchain technology and distributed-ledger technology in general is untested and outside anyone’s exclusive control, and adverse changes in market forces or the technology, broadly construed, will excuse the performance of the \gls{AragonNetwork}.
-				\item They understand the governance procedure and applicable rules of the \gls{AragonNetwork} and especially the smart contracts' functioning and limitations.
-				\item They understand the following risks, associated to the use of blockchain, crypto-assets and therefore the \gls{AragonNetwork}, which they agree to take at their sole responsibility, including but not limited to risk associated with:
-				\begin{enumerate}
-					\item Ethereum’s malfunction (or any other protocol used)
-					\item Unfavorable regulatory action in one or more jurisdictions
-					\item Theft and hacking
-					\item Security weakness in the \gls{AragonNetwork} components
-					\item Weaknesses or exploitable breakthroughs in the field of
-					cryptography
-					\item Smart contracts underlying the \gls{AragonNetwork} are new and may therefore be subject to fraud and failures or include weaknesses or bugs
-					\item The tax treatment crypto-assets is uncertain and there may be adverse tax consequences when participating or interacting with the \gls{AragonNetwork} or holding any \ac{ANT}
-					\item Losing of credentials to access \ac{ANT} balances results in such \acp{ANT} becoming unrecoverable and permanently lost
-					\item Uninsured losses
-					\item Internet transmission risks
-					\item Insufficient participation in the \gls{AragonNetwork}
-					\item Unanticipated risks and force majeure
-				\end{enumerate}
-			
-			\end{enumerate}
-		
-		\end{enumerate}
-	
-		\subsectionitem{Discharge of Future Claims}
-		\begin{enumerate}
-			
-			\item To the fullest extent permitted by the applicable law, you agree to indemnify, hold and defend The \gls{AragonNetwork} from and against all claims, liabilities, damages, judgments, losses, costs, expenses or fees (including reasonable attorneys' fees) that arise from or related to:
-			\begin{enumerate}
-				\item your violation of this Charter;
-				\item your use or interaction with the \gls{AragonNetwork}; and
-				\item your interaction with other \glspl{ANTHolder} or third parties in the
-				framework of the \gls{AragonNetwork}.
-			\end{enumerate}
-			
-			\item You agree that you use and participate in the \gls{AragonNetwork} and interact with the \gls{AragonNetwork} \ac{DAO} as well as with other \glspl{ANTHolder} or third parties in the framework of the \gls{AragonNetwork} at your sole risk, especially acknowledging the risks described in this Agreement (the \gls{AragonNetwork} \ac{DAO} Agreement).
-			
-		\end{enumerate}
-
-		\subsectionitem{Legal Personality}
-		\begin{enumerate}
-			\item The \gls{AragonNetwork} is not intended to have legal personality, nor the \glspl{ANTHolder} to have any interest or membership over the Aragon Association or any other legal entity of the \gls{AragonNetwork} unless explicitly defined in the articles of incorporation of said entity.
-		\end{enumerate}
-	
-		\subsectionitem{Modifications to the Aragon Network DAO Agreement}
-		\begin{enumerate}
-			
-			\item \glspl{ANTHolder} may only modify the rules of this Agreement as follows:
-			\begin{enumerate}
-				\item The \hyperref[sec:ImmutableGuidelines]{Immutable Guidelines} must not be modified.
-				\item The \hyperref[sec:MutableGuidelines]{Mutable Guidelines} may be modified by:
-				\begin{enumerate}
-					\item Majority (more than 50\% in favour) vote, with a minimum quorum of 0.5\% of \glspl{ANTHolder}.
-					The \glspl{ANTHolder} must be notified of the suggested amendment through reasonable means at least thirty (30) days before the beginning of the vote, and the vote must be open for a minimum of fourteen (14) days for the community to vote.
-				\end{enumerate}
-				\item  Voting must be organised in \gls{AragonVoice}.
-			\end{enumerate}
-		
-		\end{enumerate}
-	
+		\item Ethereum’s malfunction (or any other protocol used)
+		\item Unfavorable regulatory action in one or more jurisdictions
+		\item Theft and hacking
+		\item Security weakness in the \gls{AragonNetwork} components
+		\item Weaknesses or exploitable breakthroughs in the field of
+		cryptography
+		\item Smart contracts underlying the \gls{AragonNetwork} are new and may therefore be subject to fraud and failures or include weaknesses or bugs
+		\item The tax treatment crypto-assets is uncertain and there may be adverse tax consequences when participating or interacting with the \gls{AragonNetwork} or holding any \ac{ANT}
+		\item Losing of credentials to access \ac{ANT} balances results in such \acp{ANT} becoming unrecoverable and permanently lost
+		\item Uninsured losses
+		\item Internet transmission risks
+		\item Insufficient participation in the \gls{AragonNetwork}
+		\item Unanticipated risks and force majeure
 	\end{enumerate}
 
 \end{enumerate}
+
+\subsection{Discharge of Future Claims}
+\begin{enumerate}
+	\item To the fullest extent permitted by the applicable law, you agree to indemnify, hold and defend The \gls{AragonNetwork} from and against all claims, liabilities, damages, judgments, losses, costs, expenses or fees (including reasonable attorneys' fees) that arise from or related to:
+	\begin{enumerate}
+		\item your violation of this Charter;
+		\item your use or interaction with the \gls{AragonNetwork}; and
+		\item your interaction with other \glspl{ANTHolder} or third parties in the
+		framework of the \gls{AragonNetwork}.
+	\end{enumerate}
+	
+	\item You agree that you use and participate in the \gls{AragonNetwork} and interact with the \gls{AragonNetwork} \ac{DAO} as well as with other \glspl{ANTHolder} or third parties in the framework of the \gls{AragonNetwork} at your sole risk, especially acknowledging the risks described in this Agreement (the \gls{AragonNetwork} \ac{DAO} Agreement).
+	
+\end{enumerate}
+
+\subsection{Legal Personality}
+\begin{enumerate}
+	\item The \gls{AragonNetwork} is not intended to have legal personality, nor the \glspl{ANTHolder} to have any interest or membership over the Aragon Association or any other legal entity of the \gls{AragonNetwork} unless explicitly defined in the articles of incorporation of said entity.
+\end{enumerate}
+
+\subsection{Modifications to the Aragon Network DAO Agreement}
+\glspl{ANTHolder} may only modify the rules of this Agreement as follows:
+\begin{enumerate}
+	\item The \hyperref[sec:ImmutableGuidelines]{Immutable Guidelines} must not be modified.
+	\item The \hyperref[sec:MutableGuidelines]{Mutable Guidelines} may be modified by:
+	\begin{enumerate}
+		\item Majority (more than 50\% in favour) vote, with a minimum quorum of 0.5\% of \glspl{ANTHolder}.
+		The \glspl{ANTHolder} must be notified of the suggested amendment through reasonable means at least thirty (30) days before the beginning of the vote, and the vote must be open for a minimum of fourteen (14) days for the community to vote.
+	\end{enumerate}
+	\item  Voting must be organised in \gls{AragonVoice}.
+\end{enumerate}
+
+\end{document}

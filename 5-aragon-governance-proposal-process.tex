@@ -1,191 +1,231 @@
-%!TEX root = network-dao-charter.tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
-\charterchapter{Aragon Governance Proposal Process}
-\label{chap:AGPProcess}
+\title{Aragon Governance Proposal Process}
+\input{_header.tex}
 
+\begin{document}
+\mytitle
+
+\section{Purpose}
 The purpose of the \acf{AGP} process is to provide a structured process for making changes to the shared resources of the \gls{AragonNetwork}.
 For these shared resources, governance processes are needed to grant or deny access and approve or reject proposed changes.
 
+\section{Governance Bodies}
+
+The following bodies will form part of the \ac{AGP} process and are collectively referred to as the \gls{AragonNetworkDAO}, composed of a Main \ac{DAO} and Sub-\acp{DAO}.
+
+\subsection{Main \ac{DAO}}
+
+The Main \ac{DAO} is an Aragon Govern \ac{DAO} that uses \gls{AragonVoice} voting to validate the community’s sentiment and then scheduling for on-chain execution on Govern, enabling \glspl{ANTHolder} to both exercise direct democracy (directly propose and approve proposals of any kind) and elect members to existing or new Sub-\acp{DAO}.
+
+
+\subsection{Sub-\acp{DAO}} 
+
+The following Sub-\acp{DAO} exist and are controlled by the Main \ac{DAO}.
+
+
+\subsubsection*{Executive Sub-\ac{DAO}}
+
+The Executive Sub-\ac{DAO} is an Aragon Govern \ac{DAO}, with permission for treasury management of the Operations Vault.
 \begin{enumerate}
+	\item The Executive Committee \ac{DAO} is governed on a do-ocracy basis (Optimistic Governance) by the Executive Committee Members.
+	\item Members of the Executive \ac{DAO} (``Executive Committee Members'') are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
+\end{enumerate}
+
+
+\subsubsection*{Compliance Sub-\ac{DAO}}
+
+The Compliance Sub-\ac{DAO} is an Aragon Govern \ac{DAO}, with permission to veto proposals and actions in the Main \ac{DAO} and Sub-\acp{DAO} that represent a breach of this Charter and/or directly harm the \gls{AragonNetwork}.
+\begin{enumerate}
+	\item The above shall not include actions or proposals to add and/or remove wallet addresses from the Compliance \ac{DAO}.
+	\item The compliance \ac{DAO} is governed on a do-ocracy basis (Optimistic Governance) by the Compliance Committee Members.
+	\item Members of the Compliance \ac{DAO} (``Compliance Committee Members'' i.e. wallets with permission to veto proposals through the Compliance \ac{DAO}) are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
+\end{enumerate}
+
+
+\subsubsection*{Tech Committee}
+
+The Tech Committee is an off-chain committee charged with deploying accepted proposals that contain new code (and managing the access to the necessary Web2 platforms to perform this task).
+The Tech Committee also has the authority to remove proposals that do not meet technical quality standards as well as to determine which proposals should be subject to a 3rd party independent technology audit.
+\begin{enumerate}
+	\item The Tech Committee decides on the need (or lack thereof) for audits on proposals using \gls{AragonVoice} and a majority vote.
+	\item Members of the Tech \ac{DAO} (``Tech Committee Members'') are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
+\end{enumerate}
+
+\subsection{Aragon Court}
+Used to challenge the actions scheduled on both the Main \ac{DAO} and any Sub-\ac{DAO}, and directly from the Voice UI / or the custom UI for AN \ac{DAO}.
 	
-	\sectionitem{Governance Bodies}
+
+
+\section{Separation of Powers}
+
+\begin{enumerate}
+	\item The same members shall not be part of more than one of the following: the Executive Sub-\ac{DAO}, Compliance Sub-\ac{DAO}, Tech Committee, and \glspl{Guardian} in \gls{AragonCourt} mainnet.
+	\item When a decentralised identity solution is integrated into the \ac{DAO}, members of these committees shall prove their unique identity using said solution.
+\end{enumerate}
+
+
+\section{Formation of new Sub-DAOs}
+
+\begin{enumerate}
+	\item The Main \ac{DAO} can deploy a new Sub-\ac{DAO}, be given control over an already deployed \ac{DAO}, dissolve an existing Sub-\ac{DAO}, or spin-off a Sub-\ac{DAO} as an independent \ac{DAO} at any point in time.
+	\item Each Sub-\ac{DAO} shall have its own operating agreement outlining at a minimum the responsibilities of its members which shall be listed as an Appendix to the \gls{AragonNetworkCharter}.
+	\item In case of conflict between agreements, The \gls{AragonNetworkCharter} shall prevail over any Sub-\ac{DAO} operating agreement.
+\end{enumerate}
+
+
+\section{Treasuries \& Permissions}
+
+\subsubsection*{Investment Vault} The reserve treasury of the \gls{AragonNetwork}.
+
+Used to fund Sub-\acp{DAO} and/or to obtain yield.
+\begin{enumerate}
+	\item Any \ac{ANT} Holder can make proposals for Financial Proposals as described in the Financial Proposals section of this \ac{AGP} process document.
+\end{enumerate}
+
+
+\subsubsection*{Operations Vault} The main treasury of the \gls{AragonNetwork}.
+
+Used to fund operations and make strategic fundings.
+\begin{enumerate}
+	\item Any \ac{ANT} Holder can make proposals for Financial Proposals as
+	described in the Financial Proposals section of this \ac{AGP} process
+	document.
+	\item And any wallet with permissions for the Executive \ac{DAO} (i.e. any member of the Executive \ac{DAO}) can program and delete Financial Actions in the Executive Sub-\ac{DAO} as per the Executive Sub-\ac{DAO} operating agreement.
+\end{enumerate}
+
+\subsubsection*{Additional Treasuries}
+\begin{enumerate}
+	\item Sub-\acp{DAO} are not allowed to create additional treasuries under the exclusive control of the Sub-\ac{DAO} (and outside of the control of the Main \ac{DAO}) unless approved by a majority vote of \glspl{ANTHolder}.
+	\item The Main \ac{DAO} may create additional treasuries through a majority vote of \glspl{ANTHolder}.
+\end{enumerate}  
+
+
+\section{Proposals}
+
+\begin{enumerate}
+	\item Any \ac{ANTHolder} can create a Proposal in the Main \ac{DAO}.
+	\item Any Sub-\ac{DAO} may remove a scheduled proposal at any time (e.g. Veto right) should they have the power to do so as per their operating agreement and as per this Charter.
+	\item All proposals must comply with the Requirements for Proposals \& the specific format and process for the type of proposal as follows:
+\end{enumerate}
+
+\subsection{The Requirements for Proposals}
+
+\begin{enumerate}
+	\item \textbf{Public deliberation:} all proposals must be shared during the public deliberation phase in the Aragon Forum and linked in the Aragon Discord Server, unless these services are unavailable.
+	\item \textbf{Voting period:} the vote on \gls{AragonVoice} must be at least 7 days.
+	\item \textbf{Scheduling:} once approved, proposals are automatically scheduled for execution 5 days after the end of the vote.
+	\item \textbf{Collateral:} the proposer must put 50 \ac{ANT} as collateral during the voting period.
+	This collateral might be slashed if the proposal is challenged in \gls{AragonCourt} and ruled to violate any provision of this Charter.
+\end{enumerate}
+
+
+\subsection{Types of Proposals}
+
+\begin{enumerate}		
+	\item \textbf{Financial Proposals:} any type of financial transfer of any asset that has a monetary value from the Main \ac{DAO} or any Sub-\ac{DAO}.
+	\item \textbf{Election Proposals:} any type of proposal that gives/removes wallet permissions from the Sub-\acp{DAO}
+	\item \textbf{Other Proposals:} any other type of proposal (including Metagovernance Proposals, code submissions, parameter changes, etc).
+\end{enumerate}
+
+\subsection{Process for Financial Proposals and/or Other Proposals} 
+Proposals must pass through the following phases in sequential order:
+
+
+\subsubsection*{Public deliberation}
+\begin{enumerate}
+\item A post with the draft of the proposal is posted in the Aragon forum for a minimum of 7 days and maximum of 14 days with the format:
 	\begin{enumerate}
+		\item Title of Proposal (in the format ``Financial Proposal:[title]'')
+		\item Description of the Action
+		\item Description of why the author believes it will help to increase the number of Active Aragon \acp{DAO}
 		
-		\item The following bodies will form part of the \ac{AGP} process and are collectively referred to as the \gls{AragonNetworkDAO}, composed of a Main \ac{DAO} and Sub-\acp{DAO}.
-		\item \textbf{Main \ac{DAO}:} an Aragon Govern \ac{DAO} that uses \gls{AragonVoice} voting to validate the community’s sentiment and then scheduling for on-chain execution on Govern, enabling \glspl{ANTHolder} to both exercise direct democracy (directly propose and approve proposals of any kind) and elect members to existing or new Sub-\acp{DAO}.
-		\item \textbf{Sub-\acp{DAO}:} \acp{DAO} controlled by the Main \ac{DAO}.
-		At launch, the following Sub-\acp{DAO} will exist:
 		\begin{enumerate}
-			
-			\item \textbf{Executive Sub-\ac{DAO}:} an Aragon Govern \ac{DAO}, with permission for treasury management of the Operations Vault.
-			\begin{enumerate}
-				\item The Executive Committee \ac{DAO} is governed on a do-ocracy basis (Optimistic Governance) by the Executive Committee Members.
-				\item Members of the Executive \ac{DAO} (``Executive Committee Members'') are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
-			\end{enumerate}
-		
-			\item \textbf{Compliance Sub-\ac{DAO}:} an Aragon Govern \ac{DAO}, with permission to veto proposals and actions in the Main \ac{DAO} and Sub-\acp{DAO} that represent a breach of this Charter and/or directly harm the \gls{AragonNetwork}.
-			\begin{enumerate}
-				\item The above shall not include actions or proposals to add and/or remove wallet addresses from the Compliance \ac{DAO}.
-				\item The compliance \ac{DAO} is governed on a do-ocracy basis (Optimistic Governance) by the Compliance Committee Members.
-				\item Members of the Compliance \ac{DAO} (``Compliance Committee Members'' i.e. wallets with permission to veto proposals through the Compliance \ac{DAO}) are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
-			\end{enumerate}
-			
-			\item \textbf{Tech Committee:} an off-chain committee charged with deploying accepted proposals that contain new code (and managing the access to the necessary Web2 platforms to perform this task).
-			The Tech Committee also has the authority to remove proposals that do not meet technical quality standards as well as to determine which proposals should be subject to a 3rd party independent technology audit.
-			\begin{enumerate}
-				\item The Tech Committee decides on the need (or lack thereof) for audits on proposals using \gls{AragonVoice} and a majority vote.
-				\item Members of the Tech \ac{DAO} (``Tech Committee Members'') are elected by \glspl{ANTHolder} through a vote on the Main \ac{DAO}.
-			\end{enumerate}
-		
+			\item By default, all Financial Proposals involving a deliverable should use an Escrow (see Additional Definitions).
+			In cases where the use of an Escrow is omitted, a justification must be included in the Description.
+			\item Greet.me shall be the default Escrow provider for Financial Proposals.
 		\end{enumerate}
-		
-		\item \textbf{Aragon Court:} Used to challenge the actions scheduled on both the Main \ac{DAO} and any Sub-\ac{DAO}, and directly from the Voice UI / or the custom UI for AN \ac{DAO}.
-		
+	
+		\item And suggested optional: ETH Wallet address of the author(s) and/or other identifiers
+			
 	\end{enumerate}
-	
-	\sectionitem{Separation of Powers}
+\end{enumerate}
+
+\subsubsection*{Voting}
+\begin{enumerate}
+\item The proposal (or a revised version of the proposal incorporating the community’s feedback) is posted for a vote on \gls{AragonVoice}.
 	\begin{enumerate}
-		\item The same members shall not be part of more than one of the following: the Executive Sub-\ac{DAO}, Compliance Sub-\ac{DAO}, Tech Committee, and \glspl{Guardian} in \gls{AragonCourt} mainnet.
-		\item When a decentralised identity solution is integrated into the \ac{DAO}, members of these committees shall prove their unique identity using said solution.
+		\item For calculating voting power, 1 \ac{ANT} token = 1 Vote.
 	\end{enumerate}
+\end{enumerate}
 
-	\sectionitem{Formation of new Sub-DAOs}
+\subsubsection*{Approval} 
+\begin{enumerate}
+	\item a proposal is deemed approved and scheduled for execution if the following conditions are reached:
 	\begin{enumerate}
-		\item The Main \ac{DAO} can deploy a new Sub-\ac{DAO}, be given control over an already deployed \ac{DAO}, dissolve an existing Sub-\ac{DAO}, or spin-off a Sub-\ac{DAO} as an independent \ac{DAO} at any point in time.
-		\item Each Sub-\ac{DAO} shall have its own operating agreement outlining at a minimum the responsibilities of its members which shall be listed as an Appendix to the \gls{AragonNetworkCharter}.
-		\item In case of conflict between agreements, The \gls{AragonNetworkCharter} shall prevail over any Sub-\ac{DAO} operating agreement.
+		\item Quorum: a minimum of five thousand (5,000) \ac{ANT} has been used to vote.
+		\item  Support: The vote shall be deemed as “passed” with a simple majority (>50\%) of the participating \ac{ANT} having voted in favour.
+		\item When a proposal includes a code submission, the Tech Committee has up to 14 days to decide and communicate via a post in Aragon Forum whether a proposal will be:
+		\begin{enumerate}
+			\item Accepted and incorporated.
+			\item Submitted to a 3rd party audit to determine its safety (conditional on the Operations Vault having the necessary funds).
+			\item Rejected as malicious, technically infeasible, or economically infeasible (if an audit is required and the Operations Vault lacks the necessary funds to cover the costs of the audit).
+		\end{enumerate}
 	\end{enumerate}
+\end{enumerate}
 
-	\sectionitem{Treasuries \& Permissions}
+
+\subsection{Process for Elections}
+
+Elections must pass through the following phases in sequential order.
+
+\subsubsection*{Public deliberation phase} 
+
+\begin{enumerate}
+	\item A post with the draft of the proposal is posted in the Aragon forum for a minimum of 10 days and maximum of 30 days with the format:
 	\begin{enumerate}
-			
-		\item \textbf{Investment Vault:} The reserve treasury of the \gls{AragonNetwork}.
-		Controlled by the Main \ac{DAO} and used to fund Sub-\acp{DAO} and/or to obtain yield.
-		\begin{enumerate}
-			\item Any \ac{ANT} Holder can make proposals for Financial Proposals as described in the Financial Proposals section of this \ac{AGP} process document.
-		\end{enumerate}
-		
-		\item \textbf{Operations Vault:} The main treasury of the \gls{AragonNetwork}.
-		Used to fund operations and make strategic fundings.
-		\begin{enumerate}
-			\item Any \ac{ANT} Holder can make proposals for Financial Proposals as
-			described in the Financial Proposals section of this \ac{AGP} process
-			document.
-			\item And any wallet with permissions for the Executive \ac{DAO} (i.e. any member of the Executive \ac{DAO}) can program and delete Financial Actions in the Executive Sub-\ac{DAO} as per the Executive Sub-\ac{DAO} operating agreement.
-		\end{enumerate}
-
-		\item \textbf{Additional Treasuries}
-		\begin{enumerate}
-			\item Sub-\acp{DAO} are not allowed to create additional treasuries under the exclusive control of the Sub-\ac{DAO} (and outside of the control of the Main \ac{DAO}) unless approved by a majority vote of \glspl{ANTHolder}.
-			\item The Main \ac{DAO} may create additional treasuries through a majority vote of \glspl{ANTHolder}.
-		\end{enumerate}  
-	
+		\item \textit{Title of Proposal (in the format “Election:[title]”)}
+		\item \textit{Description of the Action (including what permissions will be given/removed for which \ac{DAO}/Sub-\ac{DAO})}
+		\item \textit{In the event of the election being proposed before the stipulated in the agreements of the Sub-\ac{DAO}, add a description of why an advanced election is needed}
+		\item \textit{And suggested optional: ETH Wallet address of the author(s) and/or other identifiers.}
 	\end{enumerate}
+\end{enumerate}
 
-	\sectionitem{Proposals}
+\subsubsection*{Sourcing Candidates}
+
+\begin{enumerate}
+	\item Candidates can be proposed (and/or propose themselves) by replying to the Forum post (only one candidate per post reply) in the following format:
 	\begin{enumerate}
-		
-		\item Any \ac{ANTHolder} can create a Proposal in the Main \ac{DAO}.
-		\item Any Sub-\ac{DAO} may remove a scheduled proposal at any time (e.g. Veto right) should they have the power to do so as per their operating agreement and as per this Charter.
-		\item All proposals must comply with the Requirements for Proposals \& the specific format and process for the type of proposal as follows:
-		
-		\subsectionitem{The Requirements for Proposals}\textbf{:}
-		\begin{enumerate}
-			\item \textbf{Public deliberation:} all proposals must be shared during the public deliberation phase in the Aragon Forum and linked in the Aragon Discord Server, unless these services are unavailable.
-			\item \textbf{Voting period:} the vote on \gls{AragonVoice} must be at least 7 days and can only begin after the public deliberation phase.
-			\item \textbf{Scheduling:} once approved, proposals are automatically scheduled for execution 5 days after the end of the vote.
-			\item \textbf{Collateral:} the proposer must put 50 \ac{ANT} as collateral during the voting period.
-			This collateral might be slashed if the proposal is challenged in \gls{AragonCourt} and ruled to violate any provision of this Charter.
-		\end{enumerate}
-	
-		\subsectionitem{Types of Proposals}\textbf{:}
-		\begin{enumerate}		
-			\item \textbf{Financial Proposals:} any type of financial transfer of any asset that has a monetary value from the Main \ac{DAO} or any Sub-\ac{DAO}.
-			\item \textbf{Elections Proposals:} any type of proposal that gives/removes wallet permissions from the Sub-\acp{DAO}
-			\item \textbf{Other Proposals:} any other type of proposal (including Metagovernance Proposals, code submissions, parameter changes, etc).
-		\end{enumerate}
-
-		\subsectionitem{Process for Financial Proposals and/or Other Proposals}\textbf{:} in sequential order:
-	
-		\begin{enumerate}
-			
-			\item \textbf{Public deliberation phase:} A post with the draft of the proposal is posted in the Aragon forum for a minimum of 7 days and maximum of 14 days with the format:
-			\begin{enumerate}
-				\item Title of Proposal (in the format ``Financial Proposal:[title]'')
-				\item Description of the Action
-				\item Description of why the author believes it will help to increase the number of Active Aragon \acp{DAO}
-				
-				\begin{enumerate}
-					\item By default, all Financial Proposals involving a deliverable should use an Escrow (see Additional Definitions).
-					In cases where the use of an Escrow is omitted, a justification must be included in the Description.
-					\item Greet.me shall be the default Escrow provider for Financial Proposals.
-				\end{enumerate}
-			
-				\item And suggested optional: ETH Wallet address of the author(s) and/or other identifiers
-					
-			\end{enumerate}
-
-			\item \textbf{Voting:} the proposal (or a revised version of the proposal incorporating the community’s feedback) is posted for a vote on \gls{AragonVoice}.
-			\begin{enumerate}
-				\item For calculating voting power, 1 \ac{ANT} token = 1 Vote.
-			\end{enumerate}
-		
-			\item \textbf{Approval:} a proposal is deemed approved and scheduled for execution if the following conditions are reached:
-			\begin{enumerate}
-				\item Quorum: a minimum of five thousand (5,000) \ac{ANT} has been used to vote.
-				\item  Support: The vote shall be deemed as “passed” with a simple majority (>50\%) of the participating \ac{ANT} having voted in favour.
-				\item When a proposal includes a code submission, the Tech Committee has up to 14 days to decide and communicate via a post in Aragon Forum whether a proposal will be:
-				\begin{enumerate}
-					\item Accepted and incorporated.
-					\item Submitted to a 3rd party audit to determine its safety (conditional on the Operations Vault having the necessary funds).
-					\item Rejected as malicious, technically infeasible, or economically infeasible (if an audit is required and the Operations Vault lacks the necessary funds to cover the costs of the audit).
-				\end{enumerate}
-			
-			\end{enumerate}
-		
-		\end{enumerate}
-	
-		\subsectionitem{Process for Elections}\textbf{:} in sequential order:
-		\begin{enumerate}
-			
-			\item \textbf{Public deliberation phase:} A post with the draft of the proposal is posted in the Aragon forum for a minimum of 10 days and maximum of 30 days with the format:
-			\begin{enumerate}
-				\item \textit{Title of Proposal (in the format “Election:[title]”)}
-				\item \textit{Description of the Action (including what permissions will be given/removed for which \ac{DAO}/Sub-\ac{DAO})}
-				\item \textit{In the event of the election being proposed before the stipulated in the agreements of the Sub-\ac{DAO}, add a description of why an advanced election is needed}
-				\item \textit{And suggested optional: ETH Wallet address of the author(s) and/or other identifiers.}
-			\end{enumerate}
-
-			\item \textbf{Sourcing Candidates:} Candidates can be proposed (and/or propose themselves) by replying to the Forum post (only one candidate per post reply) in the following format:
-			\begin{enumerate}
-				\item \textit{Identifier: their ETH wallet address (and optional their name, discord handle, twitter handle, and other identifiers)}
-				\item \textit{Rationale: description of why they are an ideal candidate for the position}
-			\end{enumerate}
-
-			\item \textbf{Voting:} top 10 candidates with the highest number of upvotes in the Aragon Forum will be put forward to a vote using \gls{AragonVoice}.
-			\begin{enumerate}
-				\item In the event of the election being proposed before the frequency stipulated in the operating agreement of the Sub-\ac{DAO} (if any), the vote must also include the option to keep the current permissions even if the current wallets were not amongst the top 10 candidates.
-			\end{enumerate}
-
-			\item \textbf{Approval \& Execution:}
-			\begin{enumerate}
-				\item In the exceptional case that two proposed users gain the same number of votes, the winner will be the candidate who reached the tieing number of votes first.
-				\begin{enumerate}
-					\item E.g. Candidate A and B both tied at 7 votes, Candidate A wins because it reached 7 votes a day before Candidate B.
-					If votes are submitted in the same block, repeat the vote.
-				\end{enumerate}
-			
-			\end{enumerate}
-		
-		\end{enumerate}
-	
+		\item \textit{Identifier: their ETH wallet address (and optional their name, discord handle, twitter handle, and other identifiers)}
+		\item \textit{Rationale: description of why they are an ideal candidate for the position}
 	\end{enumerate}
-	
-	\sectionitem{Disputes}
+\end{enumerate}
+
+
+\subsubsection*{Voting}
+\begin{enumerate}
+	\item The top 10 candidates with the highest number of upvotes in the Aragon Forum will be put forward to a vote using \gls{AragonVoice}.
 	\begin{enumerate}
-		\item Disputes between members that can not be addressed through facilitation or mediation, and disputes related to proposals shall be resolved using \gls{AragonCourt}.
-		\item The losing party shall reimburse the winning party for any \gls{AragonCourt} fees incurred by the winning party. Failing that, the Executive \ac{DAO} shall reimburse said fees.
+		\item In the event of the election being proposed before the frequency stipulated in the operating agreement of the Sub-\ac{DAO} (if any), the vote must also include the option to keep the current permissions even if the current wallets were not amongst the top 10 candidates.
+	\end{enumerate}
+\end{enumerate}
+
+\subsubsection*{Approval \& Execution}
+\begin{enumerate}
+	\item In the exceptional case that two proposed users gain the same number of votes, the winner will be the candidate who reached the tieing number of votes first.
+	\begin{enumerate}
+		\item E.g. Candidate A and B both tied at 7 votes, Candidate A wins because it reached 7 votes a day before Candidate B.
+		If votes are submitted in the same block, repeat the vote.
 	\end{enumerate}
 
 \end{enumerate}
+
+
+\section{Disputes}
+
+\begin{enumerate}
+	\item Disputes between members that can not be addressed through facilitation or mediation, and disputes related to proposals shall be resolved using \gls{AragonCourt}.
+	\item The losing party shall reimburse the winning party for any \gls{AragonCourt} fees incurred by the winning party. Failing that, the Executive \ac{DAO} shall reimburse said fees.
+\end{enumerate}
+
+\end{document}

@@ -1,5 +1,14 @@
+
 .DS_Store
 gitHeadLocal.gin
 
-network-dao-charter.*
-!network-dao-charter.tex
+*.synctex.gz
+*.toc
+*.log
+*.aux
+*.loc
+*.out
+*.soc
+*.pdf
+
+!graphics/*.pdf

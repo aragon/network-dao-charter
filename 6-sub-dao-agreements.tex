@@ -1,181 +1,168 @@
-%!TEX root = network-dao-charter.tex
 % SPDX-License-Identifier: CC-BY-SA-4.0
 
-\charterchapter{Sub-DAO Agreements}
-\label{chap:SubDAOAgreements}
+\title{Aragon Network Sub-DAO Agreements}
+\input{_header.tex}
+
+\begin{document}
+\mytitle
+
+\section{General Provisions}
+
+\subsection{Agreements}
+\begin{enumerate}
+	\item The Sub-\ac{DAO} is bound primarily to the Aragon Network Charter, and secondarily to its own rules and/or Agreements.
+\end{enumerate}
+
+
+\subsection{Membership}
 
 \begin{enumerate}
-	
-	\sectionitem{General Provisions}
+	\item The Sub-\ac{DAO} shall initially consist of 3 members.
 	\begin{enumerate}
-		
-		\subsectionitem{Agreements}
-		\begin{enumerate}
-			\item The Sub-\ac{DAO} is bound primarily to the Aragon Network Charter, and secondarily to its own rules and/or Agreements.
-		\end{enumerate}
-		
-		\subsectionitem{Membership}
-		\begin{enumerate}
-			\item The Sub-\ac{DAO} shall initially consist of 3 members.
-			\begin{enumerate}
-				\item In the first year since the creation of the Sub-\ac{DAO}, 2 of these members will be elected by the Aragon Association and 1 member will be elected through an election proposal in the Main \ac{DAO}.
-				\item In year 2, 1 of these members will be elected by the Aragon Association and 2 members will be elected through an election proposal in the Main \ac{DAO}.
-				\item In year 3, all members will be elected through an election proposal in the Main \ac{DAO}.
-				\item The term of each member shall be of 1 year.
-				\item Should multiple Committee members be reelected for more than 3 consecutive terms, the member that has been elected for the longest period of time will be discharged and replaced with a new Committee member.
-				The discharged member(s) can be re-elected after 2 years.
-				\item Only natural persons can be members of the Sub-\ac{DAO}, verified using a decentralized identity solution, chosen by the Main \ac{DAO}.
-			\end{enumerate}
-		\end{enumerate}
-		
-		\subsectionitem{Termination of Membership}
-		\begin{enumerate}
-			\item If a member commits a serious breach (as determined by the Main \ac{DAO}) of the Charter, the Main \ac{DAO} may at any time remove said member of a Sub-\ac{DAO}.
-			The member may appeal the decision using Aragon Court.
-			\item All proposals for termination will be carried out by an Aragon Voice vote.
-			\item Any appeals shall be carried out using Aragon Court.
-		\end{enumerate}
-		
-		\subsectionitem{Compensation \& Expenses}
-		\begin{enumerate}
-			\item Each Committee member of a Sub-\ac{DAO} shall be paid a monthly fee of 200~\ac{ANT} per month.
-			\item Committee members shall be reimbursed by the Executive \ac{DAO} of any reasonable expenses incurred in the performance of their duties.
-		\end{enumerate}
+		\item In the first year since the creation of the Sub-\ac{DAO}, 2 of these members will be elected by the Aragon Association and 1 member will be elected through an election proposal in the Main \ac{DAO}.
+		\item In year 2, 1 of these members will be elected by the Aragon Association and 2 members will be elected through an election proposal in the Main \ac{DAO}.
+		\item In year 3, all members will be elected through an election proposal in the Main \ac{DAO}.
+		\item The term of each member shall be of 1 year.
+		\item Should multiple Committee members be reelected for more than 3 consecutive terms, the member that has been elected for the longest period of time will be discharged and replaced with a new Committee member.
+		The discharged member(s) can be re-elected after 2 years.
+		\item Only natural persons can be members of the Sub-\ac{DAO}, verified using a decentralized identity solution, chosen by the Main \ac{DAO}.
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsection{Termination of Membership}
+
+\begin{enumerate}
+	\item If a member commits a serious breach (as determined by the Main \ac{DAO}) of the Charter, the Main \ac{DAO} may at any time remove said member of a Sub-\ac{DAO}.
+	The member may appeal the decision using Aragon Court.
+	\item All proposals for termination will be carried out by an Aragon Voice vote.
+	\item Any appeals shall be carried out using Aragon Court.
+\end{enumerate}
+
+
+\subsection{Compensation \& Expenses}
+
+\begin{enumerate}
+	\item Each Committee member of a Sub-\ac{DAO} shall be paid a monthly fee of 200~\ac{ANT} per month.
+	\item Committee members shall be reimbursed by the Executive \ac{DAO} of any reasonable expenses incurred in the performance of their duties.
+\end{enumerate}
+
+
+\section{Executive Sub-DAO}
+
+\subsection{Responsibilities}
+
+In particular the Executive \ac{DAO} has the following powers:
+\begin{enumerate}
+	\item Pay members of other Sub-\acp{DAO}
+	\item Make grants to other community members at their discretion, providing:
+	\begin{enumerate}
+		\item Such transactions are disclosed transparently on the Aragon Forum website.
+		\item An Escrow is used to hold funds until the completion of the agreed-upon deliverable.
+		\item The deliverable has been fully assessed by the members of the Executive \ac{DAO}.
+	\end{enumerate}
+	\item Pay suppliers of the Aragon network, providing such transactions are disclosed transparently on the Aragon Forum.
+\end{enumerate}
+
+Executive \ac{DAO} members have the following responsibilities:
+\begin{enumerate}
+	\item Keep an up to date record of their activities and use of funds.
+	\item Hold a General Meeting (online or offline) every fortnight and keep a record of the meeting available to the \glspl{ANTHolder}.
+	\item Not miss any more than 3 consecutive General Meetings without providing a valid excuse (medical or force majeure) or a public explanation to \glspl{ANTHolder}.
+\end{enumerate}
+
+
+\section{Decision-Making Process} 
+
+The Executive \ac{DAO} uses a lazy-consensus process as follows:
+\begin{enumerate}
 	
+	\item Any member of the Executive \ac{DAO} can schedule an action in the \ac{DAO}.
+	\item If another member disagrees or wishes to discuss said action, provided that said action has not been backed by a majority vote of the Executive \ac{DAO} members in \gls{AragonVoice}, they can:
+	\begin{enumerate}
+		\item Speak directly with the member who scheduled the action, preferably through a channel that’s readable asynchronously by the community
+		\item and, if needed, cancel the scheduled action to provide enough time for the discussion.
 	\end{enumerate}
 	
-	\sectionitem{Executive Sub-DAO}
+	\item If the discussion between members doesn’t lead to an agreement or can not be scheduled soon enough (as determined subjectively by each member), each member of the executive \ac{DAO} can trigger a vote of the Executive \ac{DAO} members using Aragon Voice to resolve the dispute through a simple majority.
+	The vote must be open for a minimum of 4 days and no longer than 14 days.
+	\item The vote’s result will be invalid if:
 	\begin{enumerate}
-		
-		\subsectionitem{Responsibilities}
-		\begin{enumerate}
-			
-			\item In particular the Executive \ac{DAO} has the following powers:
-			\begin{enumerate}
-				\item Pay members of other Sub-\acp{DAO}
-				\item Make grants to other community members at their discretion, providing:
-				\begin{enumerate}
-					\item Such transactions are disclosed transparently on the Aragon Forum website.
-					\item An Escrow is used to hold funds until the completion of the agreed-upon deliverable.
-					\item The deliverable has been fully assessed by the members of the Executive \ac{DAO}.
-				\end{enumerate}
-				\item Pay suppliers of the Aragon network, providing such transactions are disclosed transparently on the Aragon Forum.
-			\end{enumerate}
-			
-			\item And Executive \ac{DAO} members have the following responsibilities:
-			\begin{enumerate}
-				\item Keep an up to date record of their activities and use of funds.
-				\item Hold a General Meeting (online or offline) every fortnight and keep a record of the meeting available to the \glspl{ANTHolder}.
-				\item Not miss any more than 3 consecutive General Meetings without providing a valid excuse (medical or force majeure) or a public explanation to \glspl{ANTHolder}.
-			\end{enumerate}
-
-		\end{enumerate}
-	
-		\subsectionitem{Decision-Making Process} 
-		\begin{enumerate}
-			
-			\item The Executive \ac{DAO} uses a lazy-consensus process as follows:
-			\begin{enumerate}
-				
-				\item Any member of the Executive \ac{DAO} can schedule an action in the \ac{DAO}.
-				\item If another member disagrees or wishes to discuss said action, provided that said action has not been backed by a majority vote of the Executive \ac{DAO} members in \gls{AragonVoice}, they can:
-				\begin{enumerate}
-					\item Speak directly with the member who scheduled the action, preferably through a channel that’s readable asynchronously by the community
-					\item and, if needed, cancel the scheduled action to provide enough time for the discussion.
-				\end{enumerate}
-				
-				\item If the discussion between members doesn’t lead to an agreement or can not be scheduled soon enough (as determined subjectively by each member), each member of the executive \ac{DAO} can trigger a vote of the Executive \ac{DAO} members using Aragon Voice to resolve the dispute through a simple majority.
-				The vote must be open for a minimum of 4 days and no longer than 14 days.
-				\item The vote’s result will be invalid if:
-				\begin{enumerate}
-					\item Not all Committee members vote AND the voting period has lasted fewer than 14 days or longer than 30 days.
-					For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
-					\item Fewer than 50\% of Committee members have voted.
-				\end{enumerate}
-			
-			\end{enumerate}
-		
-		\end{enumerate}
-	
-	\end{enumerate}
-	
-
-	\sectionitem{Tech Committee Sub-DAO}
-	\begin{enumerate}
-		
-		\subsectionitem{Responsibilities}		
-		\begin{enumerate}
-			
-			\item In particular, the Tech Committee \ac{DAO} has the following responsibilities:
-			\begin{enumerate}		
-				\item Review technical proposals in the Main \ac{DAO} and Sub-\acp{DAO}s to assess them from a technical risk perspective.
-				\item Remove technical proposals in the Main \ac{DAO} and Sub-\acp{DAO}s that represent a significant technical risk to the project.
-				\item Approve technical proposals they believe would be beneficial to the Aragon project and DO NOT require a 3rd party technical security audit due to being low risk.
-				\item Suspend technical proposals they believe would be beneficial to the Aragon project, pending the completion of a 3rd party technical security audit.
-				\item When needed, add approved proposals to GitHub and other repositories and merge the code.
-				\item Maintaining a list of whitelisted technical security auditors they deem to be sufficiently competent to audit Aragon smart contracts.
-			\end{enumerate}
-		
-		\end{enumerate}
-	
-		\subsectionitem{Decision-Making Process}
-		\begin{enumerate}
-			\item The Tech Committee decides on a simple majority basis through an Aragon Voice vote of the Tech Committee members.
-			\item The vote’s result will be invalid if:
-			\begin{enumerate}
-				\item Not all Committee members vote AND the voting period has lasted
-				fewer than 14 days or longer than 30 days.
-				For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
-				\item Fewer than 50\% of Committee members have voted.
-			\end{enumerate}
-		\end{enumerate}
-	
-	\end{enumerate}
-	
-	\sectionitem{Compliance Committee Sub-DAO}
-	\begin{enumerate}
-		
-		\subsectionitem{Responsibilities}
-		\begin{enumerate}
-			
-			\item In particular the Compliance Committee \ac{DAO} has the following
-			responsibilities:
-			\begin{enumerate}
-				\item Reviewing all proposals in the AN \ac{DAO} and any-sub \ac{DAO} for
-				compliance with this Charter and overall legal compliance,
-				providing feedback to proposal creators where appropriate.
-				\item Remove any proposals they deem to be non-compliant with any
-				part of this Charter or illegal.
-			\end{enumerate}
-		
-		\end{enumerate}
-
-		\subsectionitem{Legal Responsibility}
-		\begin{enumerate}
-			\item The Compliance Committee members assume full legal responsibility for the approval of any illegal, unlawful, criminal or fraudulent proposal.
-		\end{enumerate}
-	
-		\subsectionitem{Decision-Making Process}
-		\begin{enumerate}
-			
-			\item The Compliance Committee \ac{DAO} operates on an lazy-consensus veto basis as follows:
-			\begin{enumerate}
-				
-				\item Any member of the Compliance Committee Sub-\ac{DAO} may cancel or delay an action in the Main \ac{DAO} or Sub-\acp{DAO}.
-				\item If the other members disagree with the decision, they can call a vote of the Committee using Aragon Voice and get the decision overturned through a simple majority vote.
-				The losing party may choose to ragequit (leave the Sub-\ac{DAO}) before the decision is enacted.
-				\item The vote’s result will be invalid if:
-				\begin{enumerate}
-					\item Not all Committee members vote AND the voting period
-					has lasted fewer than 7 days or longer than 30 days.
-					For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
-					\item Fewer than 50\% of Committee members have voted.
-				\end{enumerate}
-			
-			\end{enumerate}
-		
-		\end{enumerate}
-	
+		\item Not all Committee members vote AND the voting period has lasted fewer than 14 days or longer than 30 days.
+		For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
+		\item Fewer than 50\% of Committee members have voted.
 	\end{enumerate}
 
 \end{enumerate}
+
+
+\section{Tech Committee Sub-DAO}
+
+\subsection{Responsibilities}		
+
+In particular, the Tech Committee \ac{DAO} has the following responsibilities:
+\begin{enumerate}		
+	\item Review technical proposals in the Main \ac{DAO} and Sub-\acp{DAO} to assess them from a technical risk perspective.
+	\item Remove technical proposals in the Main \ac{DAO} and Sub-\acp{DAO} that represent a significant technical risk to the project.
+	\item Approve technical proposals they believe would be beneficial to the Aragon project and DO NOT require a 3rd party technical security audit due to being low risk.
+	\item Suspend technical proposals they believe would be beneficial to the Aragon project, pending the completion of a 3rd party technical security audit.
+	\item When needed, add approved proposals to GitHub and other repositories and merge the code.
+	\item Maintaining a list of whitelisted technical security auditors they deem to be sufficiently competent to audit Aragon smart contracts.
+\end{enumerate}
+
+
+
+\subsection{Decision-Making Process}
+
+\begin{enumerate}
+	\item The Tech Committee decides on a simple majority basis through an Aragon Voice vote of the Tech Committee members.
+	\item The vote’s result will be invalid if:
+	\begin{enumerate}
+		\item Not all Committee members vote AND the voting period has lasted
+		fewer than 14 days or longer than 30 days.
+		For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
+		\item Fewer than 50\% of Committee members have voted.
+	\end{enumerate}
+\end{enumerate}
+
+
+\section{Compliance Committee Sub-DAO}
+
+\subsection{Responsibilities}
+
+In particular the Compliance Committee \ac{DAO} has the following responsibilities:
+\begin{enumerate}
+	\item Reviewing all proposals in the AN \ac{DAO} and any-sub \ac{DAO} for
+	compliance with this Charter and overall legal compliance,
+	providing feedback to proposal creators where appropriate.
+	\item Remove any proposals they deem to be non-compliant with any
+	part of this Charter or illegal.
+\end{enumerate}
+
+
+\subsection{Legal Responsibility}
+
+\begin{enumerate}
+	\item The Compliance Committee members assume full legal responsibility for the approval of any illegal, unlawful, criminal or fraudulent proposal.
+\end{enumerate}
+
+
+\subsection{Decision-Making Process}
+
+The Compliance Committee \ac{DAO} operates on an lazy-consensus veto basis as follows:
+\begin{enumerate}
+	
+	\item Any member of the Compliance Committee Sub-\ac{DAO} may cancel or delay an action in the Main \ac{DAO} or Sub-\acp{DAO}.
+	\item If the other members disagree with the decision, they can call a vote of the Committee using Aragon Voice and get the decision overturned through a simple majority vote.
+	The losing party may choose to ragequit (leave the Sub-\ac{DAO}) before the decision is enacted.
+	\item The vote’s result will be invalid if:
+	\begin{enumerate}
+		\item Not all Committee members vote AND the voting period
+		has lasted fewer than 7 days or longer than 30 days.
+		For clarity, if all Committee members vote, the vote will be considered valid irrespective of the duration.
+		\item Fewer than 50\% of Committee members have voted.
+	\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
